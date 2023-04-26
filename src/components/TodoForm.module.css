@@ -1,0 +1,25 @@
+.button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: aliceblue;
+  color: darkslateblue;
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(200, 216, 230);
+}
+
+.input {
+  width: 200px;
+  height: 30px;
+  padding-left: 5px;
+  border: none;
+  background-color: aliceblue;
+  color: darkslateblue;
+  font-size: 16px;
+}
