@@ -2,15 +2,14 @@ import { useState } from "react";
 import Todo from "./Todo";
 import styles from './TodoList.module.css';
 
-function TodoList() {
-  const [todoList, setTodoList] = useState(['1item', '4dd']);
+function TodoList({list}) {
 
   return (
-    <ul className={styles.list}>
-      {todoList.map((item, index) => {
-      return <Todo item={item} key={index}/>
-      })}
+   list.length
+   ? <ul className={styles.list}>
+      {list.map((item, index) => <Todo item={item} key={index}/>)}
     </ul>
+    : <p>Todo list is empty</p>
   )
 }
 
