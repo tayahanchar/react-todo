@@ -7,10 +7,42 @@
   padding: 10px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: 16px;
+}
+
+.completed {
+  color: rgb(152, 155, 159);
+  background-color: inherit;
+  border: 1px solid rgb(152, 155, 159);
+}
+
+.elem__left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .icon {
   font-size: 25px;
-  margin-right: 10px;
+}
+
+.icon__complite,
+.icon__delete {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.icon__delete:hover {
+  color: darkred;
+  transition: 0.5s;
+}
+
+.icon__complite:hover {
+  color: rgb(27, 107, 17);
+  transition: 0.5s;
+}
+
+.icon__delete {
+  margin-left: 5px;
 }
