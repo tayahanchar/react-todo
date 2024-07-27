@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  gap: 20px;
+}
+
+.form__input {
+  height: 42px;
+  width: 300px;
+  border: 2px solid rgb(22, 6, 52);
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 0px 15px;
+  color: azure;
+  font-size: 18px;
+}
+
+.form__button {
+  height: 42px;
+  width: 130px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.form__button:hover {
+  cursor: pointer;
+  color: rgb(22, 6, 52);
+  transition: 0.5s;
+}
