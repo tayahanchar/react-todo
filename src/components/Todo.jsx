@@ -1,8 +1,8 @@
 import styles from './Todo.module.css';
 
-function Todo() {
+function Todo({title}) {
   return (
-    <li>todo</li>
+    <li className={styles.item}>{title}</li>
   )
 }
 

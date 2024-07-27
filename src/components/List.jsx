@@ -1,11 +1,11 @@
 import Todo from "./Todo";
 import styles from './List.module.css';
 
-function List() {
+function List({todoList}) {
 
   return (
     <ul className={styles.list}>
-      <Todo />
+      {todoList.map((todo, index) => <Todo key={index} {...todo} />)}
     </ul>
   )
 }
