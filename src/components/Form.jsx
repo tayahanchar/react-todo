@@ -16,7 +16,7 @@ function Form({addTodo}) {
   }
 
   return(
-    <form onSubmit={(event) => submitTodo(event)} className={styles.form}>
+    <form onSubmit={submitTodo} className={styles.form}>
       <input onChange={changeTodo} value={todo} className={styles.form__input} type="text" />
       <button className={styles.form__button} type="submit">Submit</button>
     </form>
