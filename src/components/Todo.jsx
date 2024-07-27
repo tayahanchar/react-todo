@@ -1,8 +1,10 @@
 import styles from './Todo.module.css';
 
-function Todo({title}) {
+function Todo({title, id, deleteTodo}) {
   return (
-    <li className={styles.item}>{title}</li>
+    <li className={styles.item}>{title}
+    <button onClick={() => deleteTodo(id)}>del</button>
+    </li>
   )
 }
 

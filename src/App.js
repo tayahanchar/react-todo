@@ -12,11 +12,17 @@ function App() {
     });
   }
 
+  function deleteTodo(id) {
+    setTodoList((prev) => {
+      return prev.filter((item) => item.id !== id);
+    });
+  }
+
   return (
     <div className="App">
       <h1>TODO app</h1>
       <Form addTodo={addTodo} />
-      <List todoList={todoList} />
+      <List todoList={todoList} deleteTodo={deleteTodo} />
     </div>
   );
 }

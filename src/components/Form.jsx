@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './Form.module.css';
+import { v4 as uuidv4 } from 'uuid';
 
 function Form({addTodo}) {
 
@@ -11,7 +12,7 @@ function Form({addTodo}) {
 
   function submitTodo(event) {
     event.preventDefault();
-    addTodo({title: todo, isCompleted: false});
+    addTodo({title: todo, isCompleted: false, id: uuidv4()});
     setTodo('');
   }
 
