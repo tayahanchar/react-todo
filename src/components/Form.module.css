@@ -1,10 +1,11 @@
 .form {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .form__input {
-  height: 42px;
+  height: 36px;
   width: 300px;
   border: 2px solid rgb(22, 6, 52);
   border-radius: 10px;
@@ -15,7 +16,7 @@
 }
 
 .form__button {
-  height: 42px;
+  height: 38px;
   width: 130px;
   border: none;
   border-radius: 10px;
