@@ -12,6 +12,16 @@ function App() {
     });
   }
 
+  function completeTodo(id) {
+    setTodoList((prev) => {
+      return prev.map((item) => {
+        return item.id === id
+          ? { ...item, isCompleted: !item.isCompleted }
+          : { ...item };
+      });
+    });
+  }
+
   function deleteTodo(id) {
     setTodoList((prev) => {
       return prev.filter((item) => item.id !== id);
@@ -22,7 +32,11 @@ function App() {
     <div className="App">
       <h1>TODO app</h1>
       <Form addTodo={addTodo} />
-      <List todoList={todoList} deleteTodo={deleteTodo} />
+      <List
+        todoList={todoList}
+        deleteTodo={deleteTodo}
+        completeTodo={completeTodo}
+      />
     </div>
   );
 }
