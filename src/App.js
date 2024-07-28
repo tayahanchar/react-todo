@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import Form from "./components/Form";
 import List from "./components/List";
+import ButtonWrapper from "./components/ButtonWrapper";
+import { TfiTrash } from "react-icons/tfi";
 
 function App() {
   const [todoList, setTodoList] = useState([]);
@@ -28,9 +30,16 @@ function App() {
     });
   }
 
+  function deleteAllTodos() {
+    setTodoList([]);
+  }
+
   return (
     <div className="App">
       <h1>TODO app</h1>
+      <ButtonWrapper>
+        <TfiTrash className="buttonWrapper" onClick={deleteAllTodos} />
+      </ButtonWrapper>
       <Form addTodo={addTodo} />
       <List
         todoList={todoList}

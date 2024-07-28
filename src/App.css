@@ -13,3 +13,13 @@
 h1 {
   font-size: 40px;
 }
+
+.buttonWrapper {
+  width: 30px;
+  height: 30px;
+  padding: 0 10px;
+}
+
+.buttonWrapper:hover {
+  cursor: pointer;
+}
