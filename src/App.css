@@ -15,9 +15,15 @@ h1 {
 }
 
 .buttonWrapper {
+  padding: 0 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.buttonWrapper svg {
   width: 30px;
   height: 30px;
-  padding: 0 10px;
 }
 
 .buttonWrapper:hover {

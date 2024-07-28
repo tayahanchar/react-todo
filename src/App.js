@@ -44,28 +44,35 @@ function App() {
   return (
     <div className="App">
       <h1>TODO app</h1>
-      <div className="buttons">
-        <ButtonWrapper>
-          <TfiTrash
+      <Form addTodo={addTodo} />
+      {!!todoList.length && (
+        <div className="buttons">
+          <ButtonWrapper
             title="Delete all todos"
             className="buttonWrapper"
             onClick={deleteAllTodos}
-          />
-        </ButtonWrapper>
-        <ButtonWrapper>
-          <TfiClose
+          >
+            <TfiTrash />
+          </ButtonWrapper>
+          <ButtonWrapper
             title="Delete completed todos"
             className="buttonWrapper"
             onClick={deleteCompletedTodos}
-          />
-        </ButtonWrapper>
-      </div>
-      <Form addTodo={addTodo} />
+          >
+            <TfiClose />
+          </ButtonWrapper>
+        </div>
+      )}
       <List
         todoList={todoList}
         deleteTodo={deleteTodo}
         completeTodo={completeTodo}
       />
+      {!!todoList.length && (
+        <p>
+          Completed todos: {todoList.filter((todo) => todo.isCompleted).length}
+        </p>
+      )}
     </div>
   );
 }
