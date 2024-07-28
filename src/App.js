@@ -4,6 +4,7 @@ import Form from "./components/Form";
 import List from "./components/List";
 import ButtonWrapper from "./components/ButtonWrapper";
 import { TfiTrash } from "react-icons/tfi";
+import { TfiClose } from "react-icons/tfi";
 
 function App() {
   const [todoList, setTodoList] = useState([]);
@@ -34,12 +35,31 @@ function App() {
     setTodoList([]);
   }
 
+  function deleteCompletedTodos() {
+    setTodoList((prev) => {
+      return prev.filter((todo) => !todo.isCompleted);
+    });
+  }
+
   return (
     <div className="App">
       <h1>TODO app</h1>
-      <ButtonWrapper>
-        <TfiTrash className="buttonWrapper" onClick={deleteAllTodos} />
-      </ButtonWrapper>
+      <div className="buttons">
+        <ButtonWrapper>
+          <TfiTrash
+            title="Delete all todos"
+            className="buttonWrapper"
+            onClick={deleteAllTodos}
+          />
+        </ButtonWrapper>
+        <ButtonWrapper>
+          <TfiClose
+            title="Delete completed todos"
+            className="buttonWrapper"
+            onClick={deleteCompletedTodos}
+          />
+        </ButtonWrapper>
+      </div>
       <Form addTodo={addTodo} />
       <List
         todoList={todoList}
